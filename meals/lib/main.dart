@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/category_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'utils/app_routes.dart';
+import 'screens/meal_detail_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     final ThemeData tema = ThemeData();
 
     return MaterialApp(
-      title: 'Vamos Cozinhar',
+      title: 'Food App',
       theme: tema.copyWith(
         scaffoldBackgroundColor: const Color.fromRGBO(255, 254, 229, 1),
         colorScheme: tema.colorScheme.copyWith(
@@ -35,10 +36,10 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
             )),
       ),
-      initialRoute: '/',
       routes: {
         AppRoutes.HOME: (ctx) => const CategoriesScreen(),
         AppRoutes.CATEGORIES_MEAL: (cxt) => const CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (cxt) => const MealDetailScreen(),
       },
     );
   }
